@@ -1,4 +1,4 @@
-# Portfólio de Business Intelligence & Controladoria Logística — DGASP / SES-PE
+# Portfólio de Business Intelligence & Controladoria Logística
 
 Repositório dedicado à apresentação de dashboards e relatórios de Business Intelligence (Power BI) desenvolvidos para a gestão orçamentária, controle de custos logísticos e análise de eficiência *per capita* da Diretoria Geral de Assistência Prisional.
 
