@@ -34,6 +34,7 @@ dashboard_gestao/
 ## 1. Dashboard Orçamentário e Financeiro
 
 [Ver relatório em PDF](https://github.com/tonyacaa/dashboard_gestao/blob/6255c6feb750ba44762bacb42cb39d38e657ad9b/Dash.%20Financeiro%20.pdf)
+
 [Ver vídeo com funcionalidades](https://github.com/tonyacaa/dashboard_gestao/blob/6255c6feb750ba44762bacb42cb39d38e657ad9b/V%C3%ADdeo%20Demonstrativo%20(Financeiro).mp4)
 
 <!-- Descomente depois de adicionar a imagem em docs/img/
@@ -84,6 +85,7 @@ O saldo financeiro costuma ficar **acima do valor orçado**. Isso acontece porqu
 ## 2. Dashboard Custo Per Capita por Unidade Prisional
 
 [Ver relatório em PDF](https://github.com/tonyacaa/dashboard_gestao/blob/main/Relat%C3%B3rio%20-%20Custo%20PerCapita.pdf)
+
 [Ver vídeo com funcionalidades](https://github.com/tonyacaa/dashboard_gestao/blob/6255c6feb750ba44762bacb42cb39d38e657ad9b/V%C3%ADdeo%20Demonstrativo%20(Per%20Capita).mp4)
 
 <!-- Descomente depois de adicionar a imagem em docs/img/
