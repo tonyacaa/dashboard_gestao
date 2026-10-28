@@ -1,56 +1,110 @@
-# Portfólio de Business Intelligence & Controladoria Logística
-
-Repositório dedicado à apresentação de dashboards e relatórios de Business Intelligence (Power BI) desenvolvidos para a gestão orçamentária, controle de custos logísticos e análise de eficiência *per capita* da Diretoria Geral de Assistência Prisional.
-
-> **Nota de Privacidade & Governança:** Os dados e indicadores apresentados neste repositório utilizam valores demonstrativos/fictícios exclusivamente para simulação de modelos de BI, análise estratégica e apresentação de portfólio profissional.
-
+Dashboards de Gestão Pública em Power BI
+Orçamento, Execução Financeira e Custo Per Capita da Saúde no Sistema Prisional
+Portfólio de dois dashboards em Power BI criados para apoiar a gestão orçamentária e o controle de custos da saúde no sistema prisional do Estado de Pernambuco. Os projetos nasceram de um problema real de gestão: os dados estavam espalhados em sistemas independentes e não havia uma visão única de planejado, executado e custo por unidade.
+> **Nota sobre os dados:** todos os dados deste repositório são **fictícios**. A estrutura do modelo, as regras de negócio e a lógica dos cálculos refletem o processo real, mas nomes, documentos, números de processos e valores foram substituídos por dados gerados para fins de demonstração. Nenhuma informação pessoal ou identificador real está presente.
+Projeto	Pergunta que responde	Principais ferramentas
+1. Orçamentário e Financeiro	Quanto planejamos, quanto executamos e quanto ainda temos de saldo?	Power BI, DAX, Excel
+2. Custo Per Capita	Quanto custa a saúde de cada pessoa privada de liberdade, por unidade e por tipo de despesa?	Power BI, DAX, Excel
 ---
-
-## 1. Dashboard de Custo Per Capita por Unidade Prisional
-
-[📄 Acessar Relatório em PDF (Custo Per Capita)](https://github.com/tonyacaa/dashboard_gestao/blob/main/Relat%C3%B3rio%20-%20Custo%20PerCapita.pdf)
-
-### 📄 Contexto e Desafio
-A gestão logística e de saúde prisional demandava visibilidade granular sobre a distribuição e eficiência dos recursos aplicados nas unidades do Estado de Pernambuco, exigindo a unificação de dados operacionais e populacionais fragmentados em múltiplos sistemas estaduais.
-
-### 🛠️ Arquitetura e Modelagem de Dados
-- **Integração de Fontes Multi-Sistema:** Criação de base unificada no Excel cruzando dados extraídos de:
-  - **SAP ERP (Módulo Logística):** Consumo de insumos e medicamentos.
-  - **Sistema Integrado de Contratos Públicos:** Prestação de serviços e contratos operacionais.
-  - **Sistema Integrado de Recursos Humanos:** Custos com folha e pessoal alocado.
-  - **Dados Populacionais Prisionais:** População de PPL (Pessoas Privadas de Liberdade) por unidade.
-- **Métricas e KPIs:** Cálculo automatizado do **Custo Per Capita por PPL** ($Custo Total \div População Carcerária$), desdobrado por Unidade Prisional e categorizado por tipo de despesa.
-
-### 🎯 Impacto Gerencial e Tomada de Decisão
-- **Identificação de Gargalos:** Mapeamento preciso das Unidades Prisionais com maior custo operacional de saúde do Estado e diagnóstico do tipo de despesa de maior impacto.
-- **Otimização de Recursos:** Redução e redistribuição estratégica do consumo de medicamentos e pessoal em unidades hiperdimensionadas.
-- **Decisões Estratégicas de Reestruturação:** Fornecimento de dados gerenciais que fundamentaram a desativação de Unidades Prisionais com baixa população carcerária e custos fixos elevados, com o remanejamento seguro de PPLs para outras unidades da rede.
-
+Conteúdo do repositório
+```
+dashboard_gestao/
+├── README.md
+├── pbix/
+│   ├── Dashboard_Financeiro.pbix
+│   └── Dashboard_Per_Capita.pbix
+├── data/
+│   ├── Base_Orcamentaria_Financeiro_FICTICIA.xlsx
+│   └── Base_Dados_Per_Capita_FICTICIA.xlsx
+└── docs/
+    ├── Relatório - Custo PerCapita.pdf
+    ├── Relatório Orçamentário Financeiro.pdf
+    └── img/            (capturas de tela)
+```
 ---
-
-## 2. Dashboard Orçamentário e Financeiro (Execução & Fluxo de Caixa)
-
-[📄 Acessar Relatório em PDF (Orçamentário & Financeiro)](https://github.com/tonyacaa/dashboard_gestao/blob/main/Relat%C3%B3rio%20Or%C3%A7ament%C3%A1rio%20Financeiro.pdf)
-
-### 📄 Contexto e Desafio
-Garantir o rigor fiscal, o acompanhamento do planejamento orçamentário aprovado junto ao Estado e a previsibilidade do fluxo de caixa da Diretoria, evitando sobrecarga em rubricas específicas de despesas.
-
-### 🛠️ Arquitetura e Modelagem de Dados
-- **Integração de Dados Financeiros e Fiscais:** Construção de modelo consolidado no Power BI alimentado por dados extraídos de:
-  - **e-Fisco (SEFAZ-PE):** Relatórios de liquidação e repasses orçamentários.
-  - **SEPLAG-PE:** Teto orçamentário aprovado no Plano Operativo (POAS).
-  - **SAP Logística, RH e Contratos Públicos:** Detalhamento gerencial de empenhos e contas a pagar.
-- **Gestão de Saldos:** Incorporação do saldo financeiro de exercícios anteriores (Aportes em Janeiro) para cálculo preciso do saldo em caixa vs. saldo orçamentário disponível.
-
-### 🎯 Impacto Gerencial e Tomada de Decisão
-- **Conformidade e Regularidade Fiscal:** Acompanhamento contínuo da relação **Orçado (SEPLAG) vs. Executado**, assegurando o cumprimento das metas orçamentárias estaduais.
-- **Diagnóstico do Impulsionador de Custos:** Identificação imediata da categoria de despesa que mais impacta a matriz financeira da Diretoria (e.g., Pessoal e Insumos Críticos).
-- **Previsibilidade Financeira:** Monitoramento mensal do fluxo de caixa (entradas x saídas), garantindo sustentabilidade orçamentária para a continuidade dos serviços essenciais.
-
+1. Dashboard Orçamentário e Financeiro
+Ver relatório em PDF
+<!-- Descomente depois de adicionar a imagem em docs/img/
+![Visão geral do dashboard financeiro](docs/img/financeiro_visao_geral.png)
+Contexto e desafio
+Para controlar os gastos com saúde no sistema prisional, é preciso comparar o que foi planejado com o que foi executado, mês a mês. Essas informações ficavam em sistemas diferentes, e consolidá-las manualmente era lento e sujeito a erro.
+O que o dashboard mostra
+Orçamento previsto x execução financeira, por mês.
+Saldo orçamentário (planejado menos executado) e saldo financeiro (recursos disponíveis menos executado).
+Fluxo de caixa mensal, com repasses recebidos e valores executados.
+Detalhamento por tipo de despesa: página dedicada com a distribuição entre pessoal, medicamentos e insumos, contratos de pessoa jurídica e diárias de servidores.
+Data da última atualização da base, para dar transparência ao usuário.
+Fontes de dados e consolidação
+Os dados vêm de quatro sistemas independentes e são consolidados em uma base paralela mantida em Excel, que alimenta o modelo do Power BI.
+Fonte	O que fornece
+SIPAE (Sistema Integrado de Planejamento, Administração e Execução Orçamentária)	Orçamento planejado da diretoria
+e-Fisco (SEFAZ-PE)	Relatório de liquidações da fonte orçamentária, que mostra o que foi de fato executado
+CEOS (SAP de gestão de suprimentos)	Gastos com compra e expedição de medicamentos e insumos hospitalares
+PE-Integrado	Contratos ativos de pessoa jurídica
+Modelo de dados
+Base consolidada em Excel, com tabelas formatadas e relacionadas no Power BI:
+`Fato_Liquidacoes`: uma linha por liquidação (tabela fato), com tipo de despesa, fonte de recurso, valores liquidados, estornados e líquidos.
+`Orcamento_Mensal`: planejado, repasses, saldo remanescente, executado por fonte e saldos, por mês.
+`Classificação CNPJ`: regra que classifica cada credor em um tipo de despesa (medicamentos, veículos, TI, motoristas, manutenção etc.). Pessoas físicas entram automaticamente como pessoal.
+`Dim_Fonte`: dimensão das fontes de recurso.
+`Calendario`: dimensão de datas.
+`Controle`: data da última liquidação carregada.
+Regra de negócio importante
+O saldo financeiro costuma ficar acima do valor orçado. Isso acontece porque ele reúne os repasses mensais do Ministério da Saúde, pagos com base na política nacional, mais o saldo remanescente de exercícios anteriores, que entra em janeiro. Por isso, o dashboard separa saldo orçamentário e saldo financeiro, evitando leituras erradas.
+Como apoia a tomada de decisão
+Acompanhar a execução contra o planejado e antecipar meses de pressão sobre o orçamento.
+Identificar quais tipos de despesa mais pesam no orçamento.
+Dar previsibilidade ao fluxo de caixa para a continuidade dos serviços de saúde.
+Reduzir o tempo gasto consolidando relatórios de sistemas diferentes em uma única visão.
 ---
-
-### 💻 Tecnologias e Ferramentas Utilizadas
-- **Business Intelligence:** Power BI (DAX, Modelagem Relacional, Dashboards Interativos).
-- **Tratamento de Dados:** Excel Avançado, Python e Consultas SQL.
-- **Sistemas de Origem:** SAP ERP, e-Fisco (SEFAZ-PE), SEPLAG-PE, Sistemas de RH e Contratos Públicos.
-- **Domínio de Negócio:** *Supply Chain* Público, Controladoria, Gestão de Custos e Análise de Eficiência Logística.
+2. Dashboard Custo Per Capita por Unidade Prisional
+Ver relatório em PDF
+<!-- Descomente depois de adicionar a imagem em docs/img/
+![Visão geral do dashboard per capita](docs/img/percapita_visao_geral.png)
+Contexto e desafio
+Saber o gasto total não basta: unidades com populações muito diferentes não podem ser comparadas pelo valor absoluto. Era preciso medir o custo por pessoa privada de liberdade (PPL) em cada unidade e entender de qual tipo de despesa ele vem.
+O que o dashboard mostra
+Evolução mensal do custo total.
+Custo médio por PPL em cada unidade, para comparar unidades de tamanhos diferentes.
+Detalhamento de custos por tipo de despesa, em tabela interativa.
+Filtros de período e de unidade, com os valores somados conforme a seleção.
+Fontes de dados e cálculo
+Os gastos da diretoria, já consolidados no projeto financeiro, são distribuídos por unidade prisional e classificados por tipo de despesa.
+A população carcerária de cada unidade é informada pela Secretaria de Justiça e Direitos Humanos do Estado.
+```
+Custo per capita = Custo total da unidade ÷ População carcerária da unidade
+```
+Os 14 itens de despesa detalhados (pessoal, medicamentos e insumos, locação de veículos, motoristas, diárias, manutenção de equipamentos e outros) são agrupados em 10 categorias para a análise.
+Modelo de dados
+`Base_Dados_Depen`: visão detalhada, com uma linha por unidade e mês.
+`Por Atributo`: mesma informação em formato longo, por categoria de despesa, usada nos visuais.
+Tabela de correspondência entre cada item de despesa e sua categoria.
+Como apoia a tomada de decisão
+Identificar quais unidades têm o maior custo de saúde por pessoa e qual tipo de despesa explica essa diferença.
+Apoiar discussões sobre alocação de recursos, comparando unidades em bases equivalentes.
+Perceber efeitos de custo fixo em unidades com população pequena.
+---
+Como abrir os arquivos
+Instale o Power BI Desktop (gratuito).
+Baixe a pasta `pbix/` e a pasta `data/`.
+Abra o arquivo `.pbix`. Se o Power BI pedir, vá em Transformar dados → Configurações da fonte de dados → Alterar origem e aponte para a planilha correspondente na pasta `data/`.
+Clique em Atualizar.
+---
+Ferramentas e competências demonstradas
+Business Intelligence: Power BI (modelagem relacional, DAX, dashboards interativos, navegação entre páginas).
+Tratamento de dados: Excel avançado (tabelas, PROCV, regras de classificação, consolidação de múltiplos relatórios).
+Domínio de negócio: Supply Chain público, controladoria orçamentária, gestão de custos, análise de eficiência logística.
+Próximos passos
+Automatizar a consolidação das quatro fontes, hoje manual (Power Query e/ou scripts).
+Consultar as bases diretamente via SQL, quando houver acesso.
+Publicar a documentação das principais medidas DAX.
+---
+English summary
+Two Power BI dashboards built for public-sector healthcare supply chain management in the Brazilian prison system (state of Pernambuco):
+Budget & Financial Execution: consolidates four independent systems (budget planning, state accounting, SAP-based supply, and contracts) into one model to compare planned vs. executed spending, budget balance vs. cash balance, and cost drivers by expense type.
+Per Capita Health Cost: allocates spending by facility and divides it by inmate population to compare cost per person across facilities and expense categories.
+All data in this repository is fictitious; model structure and business logic mirror the real process. Tools: Power BI (DAX, data modeling), advanced Excel.
+---
+Contato
+Antônio Aca · Supply Chain & Procurement | Power BI
+LinkedIn
